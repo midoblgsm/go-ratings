@@ -45,7 +45,7 @@ func (r *RatingsApiServer) GetRating() http.HandlerFunc {
 		max := 5
 		stars := rand.Intn(max-min) + min
 
-		rating := resources.Rating{Id: id, Stars: stars, Color: "red"}
+		rating := resources.Rating{Id: id, Stars: stars, Color: "green"}
 		fmt.Printf("rating %#v", rating)
 		utils.WriteResponse(w, http.StatusOK, rating)
 	}
